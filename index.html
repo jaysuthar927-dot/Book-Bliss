@@ -86,6 +86,23 @@
     @media(max-width:760px){.hero-grid,.about-grid,.contact-layout{grid-template-columns:1fr}.hero h1{font-size:46px}.services .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:560px){.wrap{width:calc(100% - 32px)}.nav{height:auto;min-height:64px;padding:8px 0;gap:8px 12px}nav{width:100%;justify-content:space-between;gap:6px;font-size:12px}.hero{padding:42px 0 26px}.hero-grid{gap:28px}.hero h1{font-size:40px}.hero p{font-size:16px}.proof-strip{grid-template-columns:1fr;gap:0;margin-top:28px}.proof-strip span{padding:12px 0}.proof-strip span+span{border-left:0}.proof-strip strong{display:block;margin-right:0}.section-head h2,.about-copy h2,.contact h2{font-size:30px}.services .grid,.setup-grid,.mission-grid{grid-template-columns:1fr}.team-grid{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;padding:0 12px 12px;scroll-padding-inline:12px;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}.team-grid::-webkit-scrollbar{display:none}.team-grid .person{flex:0 0 86%;min-width:0;scroll-snap-align:start}.team-controls{display:flex;align-items:center;gap:8px;margin:2px 12px 0}.team-control{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:var(--white);color:var(--navy);font:inherit;font-size:18px;line-height:1;cursor:pointer}.team-control:focus-visible{outline:2px solid var(--teal);outline-offset:2px}.team-control:disabled{opacity:.4;cursor:default}.team-count{min-width:36px;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;text-align:center}.team-swipe-hint{margin-left:auto;color:var(--muted);font-size:12px}.whatsapp-float{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));gap:8px;padding:12px 15px;font-size:13px}.service{padding:16px 0 19px}.package{padding:19px}.person{padding:20px}.contact{padding:52px 0}.lead-form{padding:20px}}
     @media(max-width:360px){.brand{font-size:14px;line-height:1.15}.nav{gap:4px}nav{gap:6px;font-size:11px}.hero h1{font-size:36px}}
+    .service-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+    .service-filter{border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--navy);padding:8px 14px;font:inherit;font-size:13px;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease}
+    .service-filter[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+    .service-filter:focus-visible,.service-add:focus-visible,.shortlist-clear:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+    .service[hidden],.service-shortlist[hidden]{display:none!important}
+    .service-kicker{margin-top:14px;color:var(--copper);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .service-add{display:inline-flex;align-items:center;gap:6px;margin-top:16px;padding:7px 10px;border:1px solid var(--line);border-radius:4px;background:white;color:var(--navy);font:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:background .18s ease,border-color .18s ease,color .18s ease}
+    .service-add[aria-pressed="true"]{background:var(--mint);border-color:var(--teal);color:#0d665d}
+    .service-shortlist{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:26px;padding:22px 24px;border:1px solid #cbd8d0;border-radius:5px;background:#f7f6f1}
+    .shortlist-copy .eyebrow{font-size:11px}.shortlist-status{margin:5px 0 0;color:var(--navy);font-weight:700}
+    .shortlist-items{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 0;padding:0;list-style:none}
+    .shortlist-items li{padding:4px 10px;border-radius:999px;background:white;color:var(--navy);font-size:12px}
+    .shortlist-note{margin:8px 0 0;color:var(--muted);font-size:12px}
+    .shortlist-actions{display:flex;align-items:center;gap:12px;flex:none}
+    .shortlist-clear{border:0;background:transparent;color:var(--muted);font:inherit;font-size:13px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+    .service-add:hover{border-color:var(--teal)}
+    @media(max-width:560px){.service-shortlist{align-items:flex-start;flex-direction:column;padding:18px}.shortlist-actions{width:100%;justify-content:space-between}.shortlist-actions .button{flex:1}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
   </style>
 </head>
@@ -112,14 +129,26 @@
     <section class="services" id="services">
       <div class="wrap">
         <div class="section-head"><div class="eyebrow">What we do</div><h2>Services for your finance and operations</h2><p>Explore the support areas listed by Bookbliss. Contact the team to discuss the services relevant to your business.</p></div>
-        <div class="grid">
-          <article class="service"><div class="num">01</div><h3>Accounting & bookkeeping</h3><p>Outsourced and part-time accounting, bookkeeping, account reconciliation, financial reporting and backlog support.</p></article>
-          <article class="service"><div class="num">02</div><h3>VAT & Corporate Tax</h3><p>VAT registration and return support, Corporate Tax registration, return filing, accounting and advisory services.</p></article>
-          <article class="service"><div class="num">03</div><h3>Audit & assurance</h3><p>Internal controls, internal audit and external audit services, as listed in the firm's service menu.</p></article>
-          <article class="service"><div class="num">04</div><h3>Business advisory</h3><p>Cash flow and working capital support, feasibility studies, cost-benefit analysis, IFRS advisory and valuation services.</p></article>
-          <article class="service"><div class="num">05</div><h3>Payroll & CFO support</h3><p>Payroll accounting and outsourcing, CFO services, financial oversight and operational workflow support.</p></article>
-          <article class="service"><div class="num">06</div><h3>Business setup & operations</h3><p>Company formation and licensing, PRO documentation, accounting software support and project management.</p></article>
+        <div class="service-filters" role="group" aria-label="Filter services">
+          <button class="service-filter" type="button" data-filter="all" aria-pressed="true">All services</button>
+          <button class="service-filter" type="button" data-filter="accounting" aria-pressed="false">Accounting</button>
+          <button class="service-filter" type="button" data-filter="tax" aria-pressed="false">Tax & compliance</button>
+          <button class="service-filter" type="button" data-filter="audit" aria-pressed="false">Audit</button>
+          <button class="service-filter" type="button" data-filter="advisory" aria-pressed="false">Advisory</button>
+          <button class="service-filter" type="button" data-filter="setup" aria-pressed="false">Business setup</button>
         </div>
+        <div class="grid" id="serviceGrid">
+          <article class="service" data-category="accounting"><div class="num">01</div><div class="service-kicker">Day-to-day finance</div><h3>Accounting & bookkeeping</h3><p>Outsourced and part-time accounting, bookkeeping, account reconciliation, financial reporting and backlog support.</p><button class="service-add" type="button" data-service="Accounting & bookkeeping" aria-pressed="false">＋ Add to enquiry</button></article>
+          <article class="service" data-category="tax"><div class="num">02</div><div class="service-kicker">UAE tax support</div><h3>VAT & Corporate Tax</h3><p>VAT registration and return support, Corporate Tax registration, return filing, accounting and advisory services.</p><button class="service-add" type="button" data-service="VAT or Corporate Tax" aria-pressed="false">＋ Add to enquiry</button></article>
+          <article class="service" data-category="audit"><div class="num">03</div><div class="service-kicker">Controls & assurance</div><h3>Audit & assurance</h3><p>Internal controls, internal audit and external audit services, as listed in the firm's service menu.</p><button class="service-add" type="button" data-service="Audit & assurance" aria-pressed="false">＋ Add to enquiry</button></article>
+          <article class="service" data-category="advisory"><div class="num">04</div><div class="service-kicker">Plan with clarity</div><h3>Business advisory</h3><p>Cash flow and working capital support, feasibility studies, cost-benefit analysis, IFRS advisory and valuation services.</p><button class="service-add" type="button" data-service="Business advisory" aria-pressed="false">＋ Add to enquiry</button></article>
+          <article class="service" data-category="accounting"><div class="num">05</div><div class="service-kicker">People & performance</div><h3>Payroll & CFO support</h3><p>Payroll accounting and outsourcing, CFO services, financial oversight and operational workflow support.</p><button class="service-add" type="button" data-service="Payroll or CFO support" aria-pressed="false">＋ Add to enquiry</button></article>
+          <article class="service" data-category="setup"><div class="num">06</div><div class="service-kicker">Start and operate</div><h3>Business setup & operations</h3><p>Company formation and licensing, PRO documentation, accounting software support and project management.</p><button class="service-add" type="button" data-service="Business setup" aria-pressed="false">＋ Add to enquiry</button></article>
+        </div>
+        <aside class="service-shortlist" id="serviceShortlist" aria-label="Your service enquiry" aria-live="polite" hidden>
+          <div class="shortlist-copy"><div class="eyebrow">Your enquiry shortlist</div><p class="shortlist-status" id="shortlistStatus">0 services selected</p><ul class="shortlist-items" id="shortlistItems"></ul><p class="shortlist-note">No prices are calculated here. The Bookbliss team can discuss the scope with you.</p></div>
+          <div class="shortlist-actions"><button class="shortlist-clear" id="clearShortlist" type="button">Clear</button><a class="button" href="#contact" id="continueWithServices">Continue to enquiry</a></div>
+        </aside>
       </div>
     </section>
     <section class="setup" id="setup">
@@ -170,7 +199,7 @@
             <div class="field"><label for="customerName">Your name *</label><input id="customerName" name="name" autocomplete="name" required></div>
             <div class="field"><label for="customerPhone">Your phone or WhatsApp *</label><input id="customerPhone" name="phone" type="tel" autocomplete="tel" required></div>
             <div class="field"><label for="customerEmail">Email (optional)</label><input id="customerEmail" name="email" type="email" autocomplete="email"></div>
-            <div class="field"><label for="customerService">Service you need</label><select id="customerService" name="service"><option value="">Choose a service</option><option>Accounting & bookkeeping</option><option>VAT or Corporate Tax</option><option>Audit & assurance</option><option>Payroll or CFO support</option><option>Business advisory</option><option>Business setup</option><option>Other</option></select></div>
+            <div class="field"><label for="customerService">Service you need</label><select id="customerService" name="service"><option value="">Choose a service</option><option>Accounting & bookkeeping</option><option>VAT or Corporate Tax</option><option>Audit & assurance</option><option>Payroll or CFO support</option><option>Business advisory</option><option>Business setup</option><option>Multiple services</option><option>Other</option></select></div>
             <div class="field full"><label for="customerMessage">How can we help? (optional)</label><textarea id="customerMessage" name="message"></textarea></div>
           </div>
           <button class="button" type="submit">Continue in WhatsApp</button>
@@ -218,6 +247,61 @@
       teamGrid.addEventListener("scroll", updateFounderControls, { passive: true });
       updateFounderControls();
     }
+
+    const serviceCards = [...document.querySelectorAll(".service[data-category]")];
+    const serviceFilters = [...document.querySelectorAll(".service-filter")];
+    const serviceAddButtons = [...document.querySelectorAll(".service-add")];
+    const shortlist = document.getElementById("serviceShortlist");
+    const shortlistStatus = document.getElementById("shortlistStatus");
+    const shortlistItems = document.getElementById("shortlistItems");
+    const selectedServices = new Set();
+    const serviceLabels = new Map(serviceAddButtons.map(button => [button.dataset.service, button.closest(".service").querySelector("h3").textContent.trim()]));
+
+    serviceFilters.forEach(filter => {
+      filter.addEventListener("click", () => {
+        const category = filter.dataset.filter;
+        serviceFilters.forEach(button => button.setAttribute("aria-pressed", String(button === filter)));
+        serviceCards.forEach(card => { card.hidden = category !== "all" && card.dataset.category !== category; });
+      });
+    });
+
+    const updateShortlist = () => {
+      const names = [...selectedServices];
+      shortlist.hidden = names.length === 0;
+      shortlistStatus.textContent = `${names.length} ${names.length === 1 ? "service" : "services"} selected`;
+      shortlistItems.replaceChildren(...names.map(name => {
+        const item = document.createElement("li");
+        item.textContent = serviceLabels.get(name) || name;
+        return item;
+      }));
+      serviceAddButtons.forEach(button => {
+        const isSelected = selectedServices.has(button.dataset.service);
+        button.setAttribute("aria-pressed", String(isSelected));
+        button.textContent = isSelected ? "✓ Added to enquiry" : "＋ Add to enquiry";
+      });
+    };
+
+    serviceAddButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const name = button.dataset.service;
+        if (selectedServices.has(name)) selectedServices.delete(name);
+        else selectedServices.add(name);
+        updateShortlist();
+      });
+    });
+    document.getElementById("clearShortlist").addEventListener("click", () => {
+      selectedServices.clear();
+      updateShortlist();
+    });
+    document.getElementById("continueWithServices").addEventListener("click", () => {
+      const names = [...selectedServices];
+      const serviceSelect = document.getElementById("customerService");
+      const messageField = document.getElementById("customerMessage");
+      serviceSelect.value = names.length === 1 ? names[0] : "Multiple services";
+      const previousMessage = messageField.value.split("\n\n").filter(part => !part.startsWith("Services I'm interested in:")).join("\n\n").trim();
+      const summary = `Services I'm interested in: ${names.map(name => serviceLabels.get(name) || name).join(", ")}`;
+      messageField.value = previousMessage ? `${summary}\n\n${previousMessage}` : summary;
+    });
 
     document.getElementById("contactForm").addEventListener("submit", function (event) {
       event.preventDefault();
