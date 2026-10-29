@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bookbliss Finance Consultancy provides accounting, bookkeeping, tax, audit, payroll, advisory and business setup services in Dubai, UAE.">
+  <title>Bookbliss Finance Consultancy | Dubai</title>
+  <style>
+    :root{--navy:#10263d;--teal:#168f83;--mint:#e5f4ef;--paper:#fbfaf6;--ink:#1b2733;--muted:#62707b;--line:#dce5e1;--white:#fff}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:38px;align-items:start}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.72 "Segoe UI",Arial,Helvetica,sans-serif;letter-spacing:.01em}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+    header{background:rgba(251,250,246,.95);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-.3px}.brand span{color:var(--teal)}
+    nav{display:flex;gap:24px;font-size:14px;color:#42505b}nav a:hover{color:var(--teal)}.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;background:var(--teal);color:white;border-radius:8px;padding:11px 17px;font-weight:700;font-size:14px}.nav-cta:hover,.button:hover{background:#0f756c}
+    .hero{padding:82px 0 74px;background:radial-gradient(circle at 90% 10%,#e4f3ef 0,transparent 34%),var(--paper)}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:54px;align-items:center}.eyebrow{color:var(--teal);font-weight:800;font-size:12px;letter-spacing:1.6px;text-transform:uppercase}
+    h1,.section-head h2,.about-copy h2,.contact h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-1.1px}h1{color:var(--navy);font-size:clamp(40px,5vw,62px);line-height:1.08;margin:14px 0 20px;max-width:680px}.hero p{font-size:18px;color:#52606c;max-width:650px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.button.secondary{background:transparent;color:var(--navy);border:1px solid #b8c9c4}.button.secondary:hover{background:var(--mint)}
+    .hero-card{background:var(--navy);border-radius:18px;padding:30px;color:white;box-shadow:0 20px 45px #10263d1b}.hero-card .small{color:#9edbd0;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.3px}.hero-card h2{font-family:Georgia,"Times New Roman",serif;font-size:27px;font-weight:500;line-height:1.25;margin:12px 0 10px}.hero-card p{font-size:15px;color:#d7e3e5;margin:0}.ticks{display:grid;gap:12px;margin-top:24px}.ticks div{display:flex;gap:10px;align-items:flex-start;color:#eef7f5;font-size:14px}.check{color:#78d1c2;font-weight:800}
+    section{padding:72px 0}.section-head{max-width:700px;margin-bottom:32px}.section-head h2{color:var(--navy);font-size:clamp(28px,4vw,40px);line-height:1.15;margin:8px 0 12px}.section-head p{color:var(--muted);margin:0}.services{background:var(--white)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{border:1px solid var(--line);border-radius:14px;padding:23px;background:white}.service .num{color:var(--teal);font-size:12px;font-weight:800;letter-spacing:1px}.service h3{color:var(--navy);font-family:"Segoe UI",Arial,sans-serif;font-size:18px;margin:8px 0}.service p{color:var(--muted);font-size:14px;margin:0}
+    .setup{background:#f1f6f3}.setup-intro{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}.setup-intro .section-head{margin:0}.setup-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.package{display:flex;flex-direction:column;background:white;border:1px solid var(--line);border-radius:14px;padding:20px}.package .zone{color:var(--teal);font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.package h3{color:var(--navy);font-size:18px;margin:6px 0}.package .price{color:var(--navy);font-family:Georgia,"Times New Roman",serif;font-size:28px;line-height:1.2}.package .price-note{color:var(--muted);font-size:12px;margin:3px 0 14px}.package ul{padding-left:18px;margin:0 0 18px;color:var(--muted);font-size:13px;line-height:1.55;flex:1}.package .button{font-size:12px;padding:9px 12px}.setup-note{font-size:12px;color:var(--muted);margin:20px 0 0}.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}.person{background:white;border:1px solid var(--line);border-radius:14px;padding:24px}.person.has-photo{display:grid;grid-template-columns:132px 1fr;gap:20px;align-items:start}.person-photo{width:132px;height:132px;object-fit:cover;border-radius:50%;border:4px solid white;box-shadow:0 3px 15px #10263d20}.person h3{color:var(--navy);font-size:20px;margin:0 0 3px}.person .role{color:var(--teal);font-size:13px;font-weight:700;margin-bottom:12px}.person p{color:var(--muted);font-size:14px;margin:0}.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}.mission-card{background:var(--mint);border-radius:14px;padding:22px}.mission-card h3{color:var(--navy);margin:0 0 7px}.mission-card p{color:var(--muted);font-size:14px;margin:0}.values-line{margin-top:18px;color:var(--muted);font-size:14px}.values-line strong{color:var(--navy)}
+    .contact{background:var(--navy);color:white;padding:58px 0}.contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:38px;align-items:start}.contact h2{font-size:32px;line-height:1.15;margin:0 0 12px}.contact p{color:#d1dfe1;margin:0 0 16px}.contact-details{font-size:14px;color:#d1dfe1}.lead-form{background:white;color:var(--ink);border-radius:16px;padding:25px}.lead-form h3{margin:0 0 5px;color:var(--navy);font-size:20px}.lead-form .intro{margin:0 0 18px;color:var(--muted);font-size:14px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:700;color:var(--navy)}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd8d4;border-radius:8px;padding:11px 12px;font:inherit;font-size:14px;color:var(--ink);background:white}.field textarea{min-height:88px;resize:vertical}.lead-form .button{width:100%;border:0;cursor:pointer;margin-top:15px}.privacy-note{font-size:12px!important;color:var(--muted)!important;margin:11px 0 0!important}
+    footer{padding:24px 0;background:#0b1d30;color:#cad7da;font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.foot strong{color:white}
+    @media(max-width:1000px){.setup-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:800px){.hero-grid,.about-grid,.contact-layout{grid-template-columns:1fr}.hero{padding:58px 0}.hero-card{max-width:560px}.grid{grid-template-columns:repeat(2,1fr)}.setup-intro{display:block}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1100px)}.nav{height:64px}nav{gap:12px;font-size:13px}nav a:nth-child(2){display:none}.nav-cta{display:none}.hero{padding:46px 0}.hero p{font-size:16px}.hero-card{padding:23px}section{padding:54px 0}.grid,.team-grid,.mission-grid,.setup-grid{grid-template-columns:1fr}.person.has-photo{grid-template-columns:1fr}.person-photo{width:112px;height:112px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.lead-form{padding:20px}.contact h2{font-size:28px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Bookbliss <span>Finance Consultancy</span></a>
+      <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#about">About</a><a href="#setup">Business setup</a><a href="#contact">Contact</a></nav>
+      <a class="nav-cta" href="https://wa.me/971528206768" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Business Bay, Dubai · UAE</div>
+          <h1>Accounting and finance support for your business.</h1>
+          <p>Bookbliss Finance Consultancy works with businesses on accounting, bookkeeping, tax, audit, payroll, advisory and business setup.</p>
+          <div class="actions"><a class="button" href="https://wa.me/971528206768?text=Hello%2C%20I%27d%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a><a class="button secondary" href="#services">Explore services</a></div>
+        </div>
+        <aside class="hero-card">
+          <div class="small">Bookbliss Finance Consultancy</div>
+          <h2>We balance the books.<br>You build the business.</h2>
+          <p>Explore our services or contact the team to discuss what your business needs.</p>
+          <div class="ticks">
+            <div><span class="check">✓</span><span>Accounting & bookkeeping</span></div>
+            <div><span class="check">✓</span><span>VAT & Corporate Tax support</span></div>
+            <div><span class="check">✓</span><span>Advisory & business setup</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">What we do</div><h2>Services for your finance and operations</h2><p>Explore the support areas listed by Bookbliss. Contact the team to discuss the services relevant to your business.</p></div>
+        <div class="grid">
+          <article class="service"><div class="num">01</div><h3>Accounting & bookkeeping</h3><p>Outsourced and part-time accounting, bookkeeping, account reconciliation, financial reporting and backlog support.</p></article>
+          <article class="service"><div class="num">02</div><h3>VAT & Corporate Tax</h3><p>VAT registration and return support, Corporate Tax registration, return filing, accounting and advisory services.</p></article>
+          <article class="service"><div class="num">03</div><h3>Audit & assurance</h3><p>Internal controls, internal audit and external audit services, as listed in the firm's service menu.</p></article>
+          <article class="service"><div class="num">04</div><h3>Business advisory</h3><p>Cash flow and working capital support, feasibility studies, cost-benefit analysis, IFRS advisory and valuation services.</p></article>
+          <article class="service"><div class="num">05</div><h3>Payroll & CFO support</h3><p>Payroll accounting and outsourcing, CFO services, financial oversight and operational workflow support.</p></article>
+          <article class="service"><div class="num">06</div><h3>Business setup & operations</h3><p>Company formation and licensing, PRO documentation, accounting software support and project management.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="setup" id="setup">
+      <div class="wrap">
+        <div class="setup-intro"><div class="section-head"><div class="eyebrow">UAE business setup</div><h2>Choose a licence package to get started</h2><p>Compare the UAE free zone and Dubai mainland options. Prices below are the package starting prices shared by Bookbliss; visa upgrades and final eligibility should be confirmed with the team.</p></div></div>
+        <div class="setup-grid">
+          <article class="package"><div class="zone">Free zone</div><h3>SHAMS</h3><div class="price">AED 5,750</div><div class="price-note">Starting price · without visa</div><ul><li>UAE free zone licence</li><li>Up to 3 media activities plus e-commerce</li><li>Virtual office agreement</li><li>100% ownership and setup assistance</li></ul><a class="button" href="https://wa.me/971528206768?text=Hello%20Bookbliss%2C%20I%27d%20like%20a%20consultation%20about%20the%20SHAMS%20business%20setup%20package." target="_blank" rel="noopener noreferrer">Ask about SHAMS</a></article>
+          <article class="package"><div class="zone">Free zone</div><h3>SRTIP</h3><div class="price">AED 5,500</div><div class="price-note">Starting price · without visa</div><ul><li>Free zone licence with 5 activities</li><li>Trading and service activities can be combined</li><li>Virtual office agreement</li><li>100% ownership and setup assistance</li></ul><a class="button" href="https://wa.me/971528206768?text=Hello%20Bookbliss%2C%20I%27d%20like%20a%20consultation%20about%20the%20SRTIP%20business%20setup%20package." target="_blank" rel="noopener noreferrer">Ask about SRTIP</a></article>
+          <article class="package"><div class="zone">Free zone</div><h3>RAKEZ</h3><div class="price">AED 5,700</div><div class="price-note">Starting price · without visa</div><ul><li>Free zone general trading licence</li><li>One activity and one shareholder</li><li>Virtual office agreement</li><li>100% ownership and setup assistance</li></ul><a class="button" href="https://wa.me/971528206768?text=Hello%20Bookbliss%2C%20I%27d%20like%20a%20consultation%20about%20the%20RAKEZ%20business%20setup%20package." target="_blank" rel="noopener noreferrer">Ask about RAKEZ</a></article>
+          <article class="package"><div class="zone">Free zone</div><h3>SPC</h3><div class="price">AED 6,500</div><div class="price-note">Starting price · without visa</div><ul><li>General trading and e-commerce licence</li><li>Virtual office agreement</li><li>100% business ownership</li><li>Setup assistance</li></ul><a class="button" href="https://wa.me/971528206768?text=Hello%20Bookbliss%2C%20I%27d%20like%20a%20consultation%20about%20the%20SPC%20business%20setup%20package." target="_blank" rel="noopener noreferrer">Ask about SPC</a></article>
+          <article class="package"><div class="zone">Dubai free zone</div><h3>Meydan</h3><div class="price">AED 12,500</div><div class="price-note">Starting price · without visa</div><ul><li>Up to 3 business activity types</li><li>Multiple shareholders</li><li>Virtual office agreement</li><li>100% ownership and setup assistance</li></ul><a class="button" href="https://wa.me/971528206768?text=Hello%20Bookbliss%2C%20I%27d%20like%20a%20consultation%20about%20the%20Meydan%20business%20setup%20package." target="_blank" rel="noopener noreferrer">Ask about Meydan</a></article>
+          <article class="package"><div class="zone">Dubai mainland</div><h3>Project Mainland</h3><div class="price">AED 10,999</div><div class="price-note">Starting price · without visa</div><ul><li>Project management activity</li><li>Arabic company name required</li><li>LLC with full ownership</li><li>Business setup assistance; 3 employment quota noted</li></ul><a class="button" href="https://wa.me/971528206768?text=Hello%20Bookbliss%2C%20I%27d%20like%20a%20consultation%20about%20the%20Project%20Mainland%20package." target="_blank" rel="noopener noreferrer">Ask about Project Mainland</a></article>
+          <article class="package"><div class="zone">Dubai mainland</div><h3>Dubai Mainland</h3><div class="price">AED 14,999</div><div class="price-note">Starting price · without visa</div><ul><li>Instant mainland trading or service licence</li><li>English company name</li><li>LLC with full ownership</li><li>2 investor and 3 employment quotas noted</li></ul><a class="button" href="https://wa.me/971528206768?text=Hello%20Bookbliss%2C%20I%27d%20like%20a%20consultation%20about%20the%20Dubai%20Mainland%20package." target="_blank" rel="noopener noreferrer">Ask about Dubai Mainland</a></article>
+          <article class="package"><div class="zone">Dubai mainland</div><h3>General Trading</h3><div class="price">AED 31,000</div><div class="price-note">Starting price · without visa</div><ul><li>Instant mainland general trading licence</li><li>English company name</li><li>LLC with full ownership</li><li>2 investor and 3 employment quotas noted</li></ul><a class="button" href="https://wa.me/971528206768?text=Hello%20Bookbliss%2C%20I%27d%20like%20a%20consultation%20about%20the%20Dubai%20General%20Trading%20package." target="_blank" rel="noopener noreferrer">Ask about General Trading</a></article>
+        </div>
+        <p class="setup-note">Visa upgrade pricing, activity approvals, quotas, inclusions and processing timelines depend on the package and current authority requirements. Confirm the latest quote and eligibility with Bookbliss before applying. Free consultation available.</p>
+      </div>
+    </section>
+    <section id="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="about-label"><strong>Bookbliss Finance Consultancy</strong><span>Accounting and business support in Business Bay, Dubai.</span></div>
+           <div class="about-copy"><div class="eyebrow">About Bookbliss</div><h2>Meet the people behind your finance support.</h2><p>Bookbliss Finance Consultancy was founded to provide accounting, tax and advisory support for startups, SMEs and professionals.</p><p>Our founders bring experience across accounting, compliance, reporting and business operations.</p></div>
+        </div>
+        <div class="team-grid">
+          <article class="person has-photo"><img class="person-photo" src="assets/jalpa-somaiya.webp" alt="Jalpa Somaiya, Founder and Chartered Accountant at Bookbliss Finance Consultancy" loading="lazy"><div><h3>Jalpa Somaiya</h3><div class="role">Founder & Chartered Accountant</div><p>Jalpa is a Chartered Accountant and member of the Institute of Chartered Accountants of India (ICAI). Her experience includes Indian accounting, international compliance, hospitality pre-opening projects, investments, veterinary clinics, real estate operations and group compliance for multinational firms.</p></div></article>
+          <article class="person"><h3>Deep Khandhedia</h3><div class="role">Co-Founder</div><p>Deep advises businesses on accounting, taxation, financial reporting and strategic planning. His experience spans bookkeeping, VAT and Corporate Tax, budgeting, audits and business planning across UAE and global markets.</p></article>
+        </div>
+        <div class="mission-grid">
+          <article class="mission-card"><h3>Our vision</h3><p>To be a trusted financial growth partner for startups and SMEs through reliable, personalised financial services.</p></article>
+          <article class="mission-card"><h3>Our mission</h3><p>To help businesses and individuals grow through accounting, tax, business setup and audit support, alongside guidance for long-term financial planning.</p></article>
+        </div>
+        <p class="values-line"><strong>Our values:</strong> integrity, accountability, diversity and customer centricity.</p>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="wrap contact-layout">
+        <div class="contact-copy"><div class="eyebrow">Contact</div><h2>Let’s discuss what your business needs.</h2><p>Bookbliss Finance Consultancy · Business Bay, Dubai</p><div class="contact-details">WhatsApp: +971 52 820 6768<br>Email: info@book-bliss.com</div></div>
+        <form class="lead-form" id="contactForm">
+          <h3>Send an enquiry</h3><p class="intro">Share your details and choose a service. You’ll be able to review the message in WhatsApp before sending it.</p>
+          <div class="form-grid">
+            <div class="field"><label for="customerName">Your name *</label><input id="customerName" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="customerPhone">Your phone or WhatsApp *</label><input id="customerPhone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field"><label for="customerEmail">Email (optional)</label><input id="customerEmail" name="email" type="email" autocomplete="email"></div>
+            <div class="field"><label for="customerService">Service you need</label><select id="customerService" name="service"><option value="">Choose a service</option><option>Accounting & bookkeeping</option><option>VAT or Corporate Tax</option><option>Audit & assurance</option><option>Payroll or CFO support</option><option>Business advisory</option><option>Business setup</option><option>Other</option></select></div>
+            <div class="field full"><label for="customerMessage">How can we help? (optional)</label><textarea id="customerMessage" name="message"></textarea></div>
+          </div>
+          <button class="button" type="submit">Continue in WhatsApp</button>
+          <p class="privacy-note">This page does not save submissions. Your details will be placed in a WhatsApp message to Bookbliss when you continue; review it before sending.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><span><strong>Bookbliss Finance Consultancy</strong> · Business Bay, Dubai, UAE</span><span><a href="https://book-bliss.com/">book-bliss.com</a></span></div></footer>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const fields = [
+        ["Name", form.get("name")],
+        ["Phone / WhatsApp", form.get("phone")],
+        ["Email", form.get("email")],
+        ["Service", form.get("service")],
+        ["Message", form.get("message")]
+      ].filter(([, value]) => String(value || "").trim());
+      const message = "Hello Bookbliss, I would like to enquire about your services.\n\n" + fields.map(([label, value]) => `${label}: ${String(value).trim()}`).join("\n");
+      window.open(`https://wa.me/971528206768?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    });
+  </script>
+</body>
+</html>
