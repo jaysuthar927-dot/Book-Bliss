@@ -62,6 +62,8 @@
     .package{border-radius:5px;padding:21px;border-color:#d6dfd8;box-shadow:none}
     .package .button{width:100%;min-height:42px}
     .team-grid{gap:18px}
+    .team-grid:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+    .team-controls{display:none}
     .person{border-radius:5px;padding:23px;background:#fff}
     .person h3{font-family:Georgia,"Times New Roman",serif;font-size:23px;font-weight:500}
     .person p{font-size:14px;line-height:1.7}
@@ -77,7 +79,7 @@
     @keyframes rise-in{from{transform:translateY(10px)}to{transform:translateY(0)}}
     @media(max-width:900px){.hero-grid{gap:32px}.hero{padding-top:60px}.hero h1{font-size:48px}.setup-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:760px){.hero-grid,.about-grid,.contact-layout{grid-template-columns:1fr}.hero h1{font-size:46px}.services .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:560px){.wrap{width:calc(100% - 32px)}.nav{height:auto;min-height:64px;padding:8px 0;gap:8px 12px}nav{width:100%;justify-content:space-between;gap:6px;font-size:12px}.hero{padding:42px 0 26px}.hero-grid{gap:28px}.hero h1{font-size:40px}.hero p{font-size:16px}.proof-strip{grid-template-columns:1fr;gap:0;margin-top:28px}.proof-strip span{padding:12px 0}.proof-strip span+span{border-left:0}.proof-strip strong{display:block;margin-right:0}.section-head h2,.about-copy h2,.contact h2{font-size:30px}.services .grid,.setup-grid,.team-grid,.mission-grid{grid-template-columns:1fr}.service{padding:16px 0 19px}.package{padding:19px}.person{padding:20px}.contact{padding:52px 0}.lead-form{padding:20px}}
+    @media(max-width:560px){.wrap{width:calc(100% - 32px)}.nav{height:auto;min-height:64px;padding:8px 0;gap:8px 12px}nav{width:100%;justify-content:space-between;gap:6px;font-size:12px}.hero{padding:42px 0 26px}.hero-grid{gap:28px}.hero h1{font-size:40px}.hero p{font-size:16px}.proof-strip{grid-template-columns:1fr;gap:0;margin-top:28px}.proof-strip span{padding:12px 0}.proof-strip span+span{border-left:0}.proof-strip strong{display:block;margin-right:0}.section-head h2,.about-copy h2,.contact h2{font-size:30px}.services .grid,.setup-grid,.mission-grid{grid-template-columns:1fr}.team-grid{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;padding:0 12px 12px;scroll-padding-inline:12px;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}.team-grid::-webkit-scrollbar{display:none}.team-grid .person{flex:0 0 86%;min-width:0;scroll-snap-align:start}.team-controls{display:flex;align-items:center;gap:8px;margin:2px 12px 0}.team-control{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:var(--white);color:var(--navy);font:inherit;font-size:18px;line-height:1;cursor:pointer}.team-control:focus-visible{outline:2px solid var(--teal);outline-offset:2px}.team-control:disabled{opacity:.4;cursor:default}.team-count{min-width:36px;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;text-align:center}.team-swipe-hint{margin-left:auto;color:var(--muted);font-size:12px}.service{padding:16px 0 19px}.package{padding:19px}.person{padding:20px}.contact{padding:52px 0}.lead-form{padding:20px}}
     @media(max-width:360px){.brand{font-size:14px;line-height:1.15}.nav{gap:4px}nav{gap:6px;font-size:11px}.hero h1{font-size:36px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
   </style>
@@ -137,9 +139,15 @@
           <div class="about-label"><strong>Bookbliss Finance Consultancy</strong><span>Accounting and business support in Business Bay, Dubai.</span></div>
            <div class="about-copy"><div class="eyebrow">About Bookbliss</div><h2>Meet the people behind your finance support.</h2><p>Bookbliss Finance Consultancy was founded to provide accounting, tax and advisory support for startups, SMEs and professionals.</p><p>Our founders bring experience across accounting, compliance, reporting and business operations.</p></div>
         </div>
-        <div class="team-grid">
+        <div class="team-grid" role="region" aria-label="Founder profiles" tabindex="0">
           <article class="person has-photo"><img class="person-photo" src="assets/jalpa-somaiya.webp" alt="Jalpa Somaiya, Founder and Chartered Accountant at Bookbliss Finance Consultancy" width="132" height="132" loading="lazy"><div><h3>Jalpa Somaiya</h3><div class="role">Founder & Chartered Accountant</div><p>Jalpa is a Chartered Accountant and member of the Institute of Chartered Accountants of India (ICAI). Her experience includes Indian accounting, international compliance, hospitality pre-opening projects, investments, veterinary clinics, real estate operations and group compliance for multinational firms.</p></div></article>
           <article class="person has-photo"><img class="person-photo" src="assets/deep-khandhedia.webp" alt="Deep Khandhedia, Co-Founder at Bookbliss Finance Consultancy" width="132" height="132" loading="lazy"><div><h3>Deep Khandhedia</h3><div class="role">Co-Founder</div><p>Deep advises businesses on accounting, taxation, financial reporting and strategic planning. His experience spans bookkeeping, VAT and Corporate Tax, budgeting, audits and business planning across UAE and global markets.</p></div></article>
+        </div>
+        <div class="team-controls" role="group" aria-label="Founder profile navigation">
+          <button class="team-control team-previous" type="button" aria-label="Previous founder" title="Previous founder" disabled>&larr;</button>
+          <span class="team-count" aria-live="polite">1 / 2</span>
+          <button class="team-control team-next" type="button" aria-label="Next founder" title="Next founder">&rarr;</button>
+          <span class="team-swipe-hint">Swipe to meet the founders</span>
         </div>
         <div class="mission-grid">
           <article class="mission-card"><h3>Our vision</h3><p>To be a trusted financial growth partner for startups and SMEs through reliable, personalised financial services.</p></article>
@@ -168,6 +176,40 @@
   </main>
   <footer><div class="wrap foot"><span><strong>Bookbliss Finance Consultancy</strong> · Business Bay, Dubai, UAE</span><span><a href="https://book-bliss.com/">book-bliss.com</a></span></div></footer>
   <script>
+    const teamGrid = document.querySelector(".team-grid");
+    if (teamGrid) {
+      const founderCards = [...teamGrid.querySelectorAll(".person")];
+      const teamCount = document.querySelector(".team-count");
+      const previousFounder = document.querySelector(".team-previous");
+      const nextFounder = document.querySelector(".team-next");
+      const currentFounderIndex = () => {
+        const gridCenter = teamGrid.getBoundingClientRect().left + teamGrid.clientWidth / 2;
+        return founderCards.reduce((closestIndex, card, index) => {
+          const center = card.getBoundingClientRect().left + card.getBoundingClientRect().width / 2;
+          const closestCenter = founderCards[closestIndex].getBoundingClientRect().left + founderCards[closestIndex].getBoundingClientRect().width / 2;
+          return Math.abs(center - gridCenter) < Math.abs(closestCenter - gridCenter) ? index : closestIndex;
+        }, 0);
+      };
+      const updateFounderControls = () => {
+        const index = currentFounderIndex();
+        teamCount.textContent = `${index + 1} / ${founderCards.length}`;
+        previousFounder.disabled = index === 0;
+        nextFounder.disabled = index === founderCards.length - 1;
+      };
+      const moveFounder = direction => {
+        const index = Math.max(0, Math.min(founderCards.length - 1, currentFounderIndex() + direction));
+        const card = founderCards[index];
+        const gridRect = teamGrid.getBoundingClientRect();
+        const left = teamGrid.scrollLeft + card.getBoundingClientRect().left - gridRect.left - 12;
+        const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+        teamGrid.scrollTo({ left, behavior });
+      };
+      previousFounder.addEventListener("click", () => moveFounder(-1));
+      nextFounder.addEventListener("click", () => moveFounder(1));
+      teamGrid.addEventListener("scroll", updateFounderControls, { passive: true });
+      updateFounderControls();
+    }
+
     document.getElementById("contactForm").addEventListener("submit", function (event) {
       event.preventDefault();
       const form = new FormData(event.currentTarget);
